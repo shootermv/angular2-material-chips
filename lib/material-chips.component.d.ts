@@ -11,12 +11,12 @@ export declare class MaterialChipsComponent implements ControlValueAccessor {
     tagsfocused: boolean;
     private onTouchedCallback;
     private onChangeCallback;
-    labelsChange: any;
+    labelsChange: EventEmitter<string[]>;
     constructor();
     ngOnInit(): void;
-    removeValue(value: any): void;
-    addValue(value: any, event: any): void;
-    writeValue(value: any): void;
+    removeValue(value: string): void;
+    addValue(value: string): void;
+    writeValue(value: string[]): void;
     registerOnChange(fn: any): void;
     registerOnTouched(fn: any): void;
     onFocus(): void;

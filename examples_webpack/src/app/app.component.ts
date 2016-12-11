@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import {MaterailChipsComponent} from 'angular2-material-chips/lib';
+import {MaterialChipsComponent} from 'angular2-material-chips/lib';
 
 
 
@@ -10,7 +10,7 @@ import {MaterailChipsComponent} from 'angular2-material-chips/lib';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    tags:string[]  = ['AngularJS','Angluar2';]
+    tags:string[]  = ['AngularJS','Angluar2']
     constructor() {
 
     }

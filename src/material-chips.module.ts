@@ -9,4 +9,4 @@ import {MaterialChipsComponent} from './material-chips.component';
     declarations: [MaterialChipsComponent],
     exports: [MaterialChipsComponent]
 })
-export class MaterialChips {}
+export class MaterialChipsModule {}

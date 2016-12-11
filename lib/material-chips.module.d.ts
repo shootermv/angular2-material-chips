@@ -1,2 +1,2 @@
-export declare class ColorPickerModule {
+export declare class MaterialChipsModule {
 }

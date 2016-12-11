@@ -51,18 +51,18 @@ export class MaterialChipsComponent implements ControlValueAccessor {
   private onChangeCallback: (_: any) => void = noop;
 
   @Output()
-  labelsChange;
+  labelsChange: EventEmitter<string[]>;
   
   constructor() {
-    this.labelsChange = new EventEmitter();
+    this.labelsChange = new EventEmitter<string[]>();
     this.addAreaDisplayed = false;
   }
 
   ngOnInit() {
-    this.labelsChange = new EventEmitter();
+    this.labelsChange = new EventEmitter<string[]>();
   }
 
-  removeValue(value) {
+  removeValue(value:string) {
     var index = this.values.indexOf(value, 0);
     if (index != undefined) {
       this.values.splice(index, 1);
@@ -70,7 +70,7 @@ export class MaterialChipsComponent implements ControlValueAccessor {
     }
   }
 
-  addValue(value, event) {
+  addValue(value:string) {
     if(value==='')return;
     this.values.push(value);
     this.labelsChange.emit(this.values);
@@ -78,18 +78,18 @@ export class MaterialChipsComponent implements ControlValueAccessor {
   }
   
   //From ControlValueAccessor interface
-  writeValue(value) {
+  writeValue(value:string[]) {
       if (value !== this.values) {
           this.values = value;
       }
   } 
   //From ControlValueAccessor interface
-  registerOnChange(fn) {
+  registerOnChange(fn:any) {
       this.onChangeCallback = fn;
   }
 
   //From ControlValueAccessor interface
-  registerOnTouched(fn) {
+  registerOnTouched(fn:any) {
       this.onTouchedCallback = fn;
   }  
 
