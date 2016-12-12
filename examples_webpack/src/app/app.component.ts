@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import {FormsModule} from '@angular/forms'
 import {MaterialChipsComponent} from 'angular2-material-chips/lib';
 
 

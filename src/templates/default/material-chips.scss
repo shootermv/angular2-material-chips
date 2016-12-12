@@ -32,9 +32,17 @@
 .md-chip {
   display: inline-block;
   padding: 8px 12px 8px 12px;
-    
   border-radius: 16px;
-
   font-size: 13px;
   line-height: 16px;
+}
+.md-chips-input{
+    border:0;   
+    box-shadow: 0 1px rgba(0,0,0,0.12);  
+    outline:0;
+    background:transparent;
+}
+.md-chips-input:focus{
+    box-shadow: 0 2px rgba(16, 108, 200,1); 
+    
 }

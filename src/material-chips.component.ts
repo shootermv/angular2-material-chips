@@ -23,7 +23,7 @@ export const CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR : any= {
 
 @Component({
   selector: 'material-chips',
-  template: './templates/default/material-chips.html',
+  templateUrl: './templates/default/material-chips.html',
   providers: [CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR],
   styleUrls: ['templates/default/material-chips.css']
 })
