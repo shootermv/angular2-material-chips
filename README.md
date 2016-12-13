@@ -41,7 +41,7 @@ git clone https://github.com/shootermv/angular2-material-chips.git
 npm install
 cd angular2-material-chips
 gulp
-gulp cpoylib 
+gulp copylib 
 
 cd examples-webpack
 npm install
