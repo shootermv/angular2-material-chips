@@ -35,7 +35,15 @@
   border-radius: 16px;
   font-size: 13px;
   line-height: 16px;
+  margin-right: 2px;
+  i {
+    cursor: pointer;
+  }
 }
+.md-chip:focus {
+  box-shadow: 0 2px rgba(16, 108, 200,1);
+}
+
 .md-chips-input{
     border:0;   
     box-shadow: 0 1px rgba(0,0,0,0.12);  
