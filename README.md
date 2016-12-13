@@ -34,3 +34,16 @@ import {MaterialChipsModule} from 'angular2-material-chips';
 })
 
 ```
+
+#Build & Test
+```bash
+git clone https://github.com/shootermv/angular2-material-chips.git
+npm install
+cd angular2-material-chips
+gulp
+gulp cpoylib 
+
+cd examples-webpack
+npm install
+npm start
+```
