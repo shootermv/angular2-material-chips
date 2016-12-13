@@ -16,6 +16,14 @@ npm i --save angular2-material-chips
 <material-chips [(ngModel)]="tags" ></material-chips>
 ```
 
+* Add in your app.component.ts:
+```javascript
+export class AppComponent {
+    tags:string[]  = ['AngularJS','Angluar2']
+}
+
+```
+
 * Add MaterialChipsModule in your app.module.ts:
 ```javascript
 import {MaterialChipsModule} from 'angular2-material-chips';
