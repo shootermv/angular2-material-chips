@@ -57,28 +57,20 @@ export class MaterialChipsComponent implements ControlValueAccessor {
   focused:string;
 
   @Output() tagsfocusedChange = new EventEmitter();
-  
+  @Output()
+  labelsChange: EventEmitter<string[]> = new EventEmitter<string[]>();
+
   @Input()
   get tagsfocused() {
     return this.isTagsFocused;
   }
 
-  //Placeholders for the callbacks which are later provided
-  //by the Control Value Accessor
   private onTouchedCallback: () => void = noop;
   private onChangeCallback: (_: any) => void = noop;
+  registerOnChange(fn: any) { this.onChangeCallback = fn;}
+  registerOnTouched(fn: any) { this.onTouchedCallback = fn;}
 
-  @Output()
-  labelsChange: EventEmitter<string[]>;
-  
-  constructor() {
-    this.labelsChange = new EventEmitter<string[]>();
-    this.addAreaDisplayed = false;
-  }
 
-  ngOnInit() {
-    this.labelsChange = new EventEmitter<string[]>();
-  }
 
   removeValue(value:string) {
     var index = this.values.indexOf(value, 0);
@@ -89,7 +81,7 @@ export class MaterialChipsComponent implements ControlValueAccessor {
   }
 
   addValue(value:string) {
-    if(value==='')return;
+    if(!value || value.trim()===''){return;}
     this.values.push(value);
     this.labelsChange.emit(this.values);
     this.labelToAdd = '';
@@ -101,15 +93,6 @@ export class MaterialChipsComponent implements ControlValueAccessor {
           this.values = value;
       }
   } 
-  //From ControlValueAccessor interface
-  registerOnChange(fn:any) {
-      this.onChangeCallback = fn;
-  }
-
-  //From ControlValueAccessor interface
-  registerOnTouched(fn:any) {
-      this.onTouchedCallback = fn;
-  }  
 
   onFocus() {
    this.focused = 'md-focused';
