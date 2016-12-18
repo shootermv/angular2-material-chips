@@ -1,7 +1,7 @@
 
 <div *ngIf="values && values.length" class="md-chip-list"  [ngClass]="focused">
     <span *ngFor="let value of values" class="md-chip" >         
-    {{value}} <i (click)="removeValue(tag)" >x</i>
+    {{value}} <i class="md-icon" (click)="removeValue(tag)" >clear</i>
     </span>
     
     <span style="display:inline-block;">
