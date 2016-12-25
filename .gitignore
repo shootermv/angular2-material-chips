@@ -9,6 +9,10 @@ examples/npm-debug.log
 examples_webpack/node_modules/*
 examples_webpack/dist/*
 examples_webpack/typings/*
+examples-es6-webpack/node_modules/*
+examples-s6-ebpack/dist/*
+examples-es6-webpack/typings/*
+
 
 node_modules/*
 typings/*

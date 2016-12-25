@@ -69,15 +69,17 @@ gulp.task('copylib', function (callback) {
 gulp.task('copy:lib', function () {
     return gulp.src(['lib/**/*'])
             .pipe(gulp.dest('examples_webpack/node_modules/angular2-material-chips/lib'))
+            .pipe(gulp.dest('examples-es6-webpack/node_modules/angular2-material-chips/lib'))
             .pipe(gulp.dest('examples/node_modules/angular2-material-chips/lib'));
 });
 
 gulp.task('copy:index', function () {
     return gulp.src(['index.*'])
             .pipe(gulp.dest('examples/node_modules/angular2-material-chips'))
-            .pipe(gulp.dest('examples/node_modules/angular2-material-chips'));
+            .pipe(gulp.dest('examples_webpack/node_modules/angular2-material-chips'))
+            .pipe(gulp.dest('examples-es6-webpack/node_modules/angular2-material-chips'));
 });
 
 gulp.task('clean:examples', function () {
-    return del.sync('examples_webpack/node_modules/angular2-material-chips/**/*', 'examples/node_modules/angular2-material-chips/**/*');
+    return del.sync('examples-es6-webpack/node_modules/angular2-material-chips/**/*','examples_webpack/node_modules/angular2-material-chips/**/*', 'examples/node_modules/angular2-material-chips/**/*');
 });
