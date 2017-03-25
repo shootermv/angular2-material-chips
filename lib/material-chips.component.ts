@@ -99,13 +99,11 @@ export class MaterialChipsComponent implements ControlValueAccessor {
   onFocus() {
     this.focused = 'md-focused';
     this.isTagsFocused = true;
-    console.log('tags focused', this.isTagsFocused)
     this.tagsfocusedChange.emit(this.isTagsFocused)
   }
   focusOutFunction() {
     this.focused = '';
     this.isTagsFocused = false;
-    console.log('tags focused', this.isTagsFocused)
     this.tagsfocusedChange.emit(this.isTagsFocused)
   }
 }

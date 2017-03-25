@@ -1,1 +1,1 @@
-{"version":3,"sources":["index.ts"],"names":["__export","require"],"mappings":"8FAAAA,SAAAC,QAAc,4BACdD,SAAAC,QAAc","file":"index.js","sourcesContent":["export * from './material-chips.module';\nexport * from './material-chips.component';\n"]}
+{"version":3,"sources":["index.ts"],"names":[],"mappings":";;;;;AAAA,6CAAwC;AACxC,gDAA2C","file":"index.js","sourcesContent":["export * from './material-chips.module';\nexport * from './material-chips.component';\n"]}
