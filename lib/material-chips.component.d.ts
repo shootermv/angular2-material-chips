@@ -9,7 +9,7 @@ export declare class MaterialChipsComponent implements ControlValueAccessor {
     focused: string;
     tagsfocusedChange: EventEmitter<{}>;
     labelsChange: EventEmitter<string[]>;
-    tagsfocused: boolean;
+    readonly tagsfocused: boolean;
     private onTouchedCallback;
     private onChangeCallback;
     registerOnChange(fn: any): void;
