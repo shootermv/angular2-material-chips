@@ -26,12 +26,11 @@ export const CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR: any = {
 @Component({
   selector: 'material-chips',
   template: `
-
-    <div *ngIf="values && values.length" class="md-chip-list"  [ngClass]="focused">
-        <span *ngFor="let value of values" class="md-chip" >         
-        {{value}} <i class="md-icon" (click)="removeValue(tag)" >clear</i>
+    <div *ngIf="values && values.length" class="md-chip-list" [ngClass]="focused">
+        <span *ngFor="let value of values" class="md-chip">         
+        {{value}} <i class="md-icon" (click)="removeValue(value)" >clear</i>
         </span>
-    
+
         <span style="display:inline-block;">
         <input [(ngModel)]="labelToAdd" 
         (keyup.enter)="addValue(box.value, $event);$event.preventDefault()"
@@ -41,7 +40,8 @@ export const CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR: any = {
         </span>
     </div>
     <div *ngIf="!values || !values.length">
-        <input class="md-chips-input" placeholder="Tags" #tbox  style="width:100%" (keyup.enter)="addValue(tbox.value, $event);$event.preventDefault()"/>
+        <input class="md-chips-input" placeholder="Tags" #tbox style="width:100%" (keyup.enter)="addValue(tbox.value, $event);$event.preventDefault()"
+        />
     </div>
   `,
   providers: [CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR],
